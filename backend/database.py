@@ -67,11 +67,11 @@ def get_sample_products() -> List[Dict]:
             "description": "Comfortable running shorts with moisture-wicking fabric and built-in brief. Ideal for jogging and workouts.",
             "category": "Clothing > Shorts",
             "price": 34.99,
-            "image_url": "https://images.unsplash.com/photo-1594568284297-5c12e15a2fbf?w=400",
+            "image_url": "https://teamexpress.com/cdn/shop/files/hs7692_6.jpg?v=1754078361&width=1200",
             "features": ["Lightweight", "Quick-dry", "Pocket included", "Elastic waistband"]
         },
         {
-            "name": "Under Armour Training Shoes",
+            "name": "Professional Training Shoes",
             "description": "Versatile training shoes for gym workouts and cross-training. Features responsive cushioning.",
             "category": "Footwear > Athletic Shoes",
             "price": 89.99,
@@ -195,11 +195,11 @@ def search_products_by_image_similarity(image_data: str, products: List[Dict]) -
     In production, use proper computer vision models to analyze the image
     and match against the catalog
     """
-    # For demo purposes, return a random subset of products from the catalog
+    # For demo purposes, return a small subset of products from the catalog
     # In production, you would use vision models (like CLIP) to extract features
     # from the image and match against product images in the catalog
     
-    # Return all products as search results
+    # Return first 3 products as demo search results
     # In production, this would analyze the image and return only relevant items
-    return products
+    return products[:3]
 

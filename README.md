@@ -2,22 +2,14 @@
 
 A unified AI-powered shopping assistant that handles general conversation, text-based product recommendations, and image-based product search.
 
-## 🎯 Features
+## Features
 
 - **General Conversation**: Chat with the agent about capabilities, questions, and general inquiries
 - **Text-Based Product Recommendations**: Describe what you're looking for and get tailored product suggestions
 - **Image-Based Product Search**: Upload images to find similar products from the catalog
 - **Single Unified Agent**: One intelligent agent that handles all three use cases seamlessly
 
-## 📋 Demo Video
-
-[Watch the Demo Video](https://drive.google.com/file/d/13Lm8QQEBc5OcS5sZRYMWRH9HQjLxjMDh/view?usp=sharing)
-
-## 🚀 Live Demo
-
-[Access the Live Application](https://ai-commerce-agent.onrender.com/)
-
-## 🏗️ Architecture
+## Architecture
 
 ### System Overview
 
@@ -63,7 +55,7 @@ A unified AI-powered shopping assistant that handles general conversation, text-
 - **Axios**: HTTP client
 - **CSS3**: Modern styling with gradients and animations
 
-## 🧠 AI & Decision Making
+## AI & Decision Making
 
 ### Agent Architecture
 
@@ -102,7 +94,7 @@ Following the requirement for "a single agent that handles all 3 use cases," the
 - **Portability**: Single file, easy to deploy
 - **Adequate for Demo**: Handles moderate traffic efficiently
 
-## 📁 Project Structure
+## Project Structure
 
 ```
 AI_agent_for_a_commerce_website/
@@ -126,7 +118,7 @@ AI_agent_for_a_commerce_website/
 └── README.md                 # This file
 ```
 
-## 🛠️ Installation & Setup
+## Installation & Setup
 
 ### Prerequisites
 
@@ -181,7 +173,7 @@ npm run build
 # Backend is already production-ready
 ```
 
-## 📖 API Documentation
+## API Documentation
 
 Once the backend is running, visit `http://localhost:8000/docs` for interactive API documentation.
 
@@ -230,7 +222,7 @@ Get all available products.
 #### `GET /health`
 Health check endpoint.
 
-## 🎨 User Interface
+## User Interface
 
 The frontend provides:
 - **Chat Interface**: Clean, modern chat UI with message bubbles
@@ -239,7 +231,7 @@ The frontend provides:
 - **Responsive Design**: Works on desktop and mobile
 - **Smooth Animations**: Enhanced user experience with transitions
 
-## 🧪 Testing
+## Testing
 
 ### Test the Agent
 
@@ -258,7 +250,7 @@ The frontend provides:
    - Upload any image
    - Get product recommendations
 
-## 🚢 Deployment
+## Deployment
 
 ### Backend Deployment (Render/Railway)
 
@@ -288,7 +280,7 @@ The frontend provides:
 VITE_API_URL=https://your-backend-url.com
 ```
 
-## 📊 Sample Product Catalog
+## Sample Product Catalog
 
 The demo includes 8 sample products:
 - Nike Pro Sport T-Shirt
@@ -300,7 +292,7 @@ The demo includes 8 sample products:
 - Wireless Bluetooth Earbuds
 - Premium Sports Watch
 
-## 🔮 Future Enhancements
+## Future Enhancements
 
 1. **Advanced NLP**: Integrate GPT-4 or similar for better understanding
 2. **Computer Vision**: Use CLIP or similar for real image matching
@@ -309,15 +301,15 @@ The demo includes 8 sample products:
 5. **Cart & Checkout**: Full e-commerce functionality
 6. **Analytics**: Track user behavior and improve recommendations
 
-## 📝 License
+## License
 
 This project is created for a take-home exercise.
 
-## 👨‍💻 Author
+## Author
 
 Built with attention to code quality, architecture, and user experience.
 
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - FastAPI for excellent documentation
 - React team for the amazing framework
