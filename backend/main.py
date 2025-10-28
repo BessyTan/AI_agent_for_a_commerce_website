@@ -78,6 +78,31 @@ async def get_products():
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
 
+@app.get("/chat")
+async def chat_info():
+    """
+    Get information about the chat endpoint
+    """
+    return {
+        "endpoint": "/chat",
+        "method": "POST",
+        "description": "Unified endpoint for conversations and text-based product recommendations",
+        "usage": "Send a POST request with a message and optional conversation history",
+        "request_format": {
+            "Content-Type": "application/json",
+            "body": {
+                "message": "string (required) - The message to send",
+                "conversation_history": "array (optional) - Previous messages in the conversation"
+            }
+        },
+        "examples": {
+            "general_conversation": {"message": "What's your name?"},
+            "product_recommendation": {"message": "Recommend me a t-shirt for sports"},
+            "with_history": {"message": "Hello", "conversation_history": [{"role": "user", "content": "Hi"}, {"role": "assistant", "content": "Hello!"}]}
+        },
+        "curl_example": "curl -X POST http://localhost:8000/chat -H 'Content-Type: application/json' -d '{\"message\": \"Hello\"}'"
+    }
+
 @app.post("/chat", response_model=AgentResponse)
 async def chat_with_agent(request: MessageRequest):
     """
@@ -96,6 +121,25 @@ async def chat_with_agent(request: MessageRequest):
         return AgentResponse(**result)
     except Exception as e:
         raise HTTPException(status_code=500, detail=str(e))
+
+@app.get("/image-search")
+async def image_search_info():
+    """
+    Get information about the image search endpoint
+    """
+    return {
+        "endpoint": "/image-search",
+        "method": "POST",
+        "description": "Handle image-based product search from the predefined catalog",
+        "usage": "Send a POST request with an image file in multipart/form-data format",
+        "request_format": {
+            "Content-Type": "multipart/form-data",
+            "field_name": "image",
+            "file_types": "image/* (jpg, png, etc.)"
+        },
+        "example": "Use the camera icon in the frontend or send a POST request with curl",
+        "curl_example": "curl -X POST http://localhost:8000/image-search -F 'image=@your-image.jpg'"
+    }
 
 @app.post("/image-search")
 async def image_search(image: UploadFile = File(...)):

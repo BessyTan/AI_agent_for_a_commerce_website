@@ -2,6 +2,10 @@
 
 A unified AI-powered shopping assistant that handles general conversation, text-based product recommendations, and image-based product search.
 
+Access
+Frontend: http://localhost:3000
+Backend API: http://localhost:8000
+Interactive API docs: http://localhost:8000/docs
 ## Features
 
 - **General Conversation**: Chat with the agent about capabilities, questions, and general inquiries
@@ -285,12 +289,20 @@ VITE_API_URL=https://your-backend-url.com
 The demo includes 8 sample products:
 - Nike Pro Sport T-Shirt
 - Adidas Running Shorts
-- Under Armour Training Shoes
+- Professional Training Shoes
 - Gym Gloves with Wrist Support
 - Yoga Mat - Premium Edition
 - Protein Shaker Bottle
 - Wireless Bluetooth Earbuds
 - Premium Sports Watch
+
+vailable endpoints:
+http://localhost:8000/ - API info
+http://localhost:8000/docs - Interactive API docs (Swagger UI)
+http://localhost:8000/health - Health check
+http://localhost:8000/products - Get all products
+http://localhost:8000/chat - POST endpoint for conversations
+http://localhost:8000/image-search - POST endpoint for image search
 
 ## Future Enhancements
 
